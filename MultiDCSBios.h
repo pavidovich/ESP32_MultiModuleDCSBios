@@ -1,7 +1,9 @@
 #include <Arduino.h>
 #include "Module_Address.h"
 #include "include.h"
-#include "NetConfig.h"
+
+// Mainly based on the original DCS-Bios
+// https://github.com/dcs-bios
 
 class MultiDCSBios {
   private:
@@ -72,9 +74,6 @@ class MultiDCSBios {
               address = ( c << 8) | address;
               if (address != 0x5555) {
                 state = DCSBIOS_STATE_COUNT_LOW;
-                /*Serial.print("\nAddress[");
-                Serial.print(address);
-                Serial.print("](");*/
               } else {
                 state = DCSBIOS_STATE_WAIT_FOR_SYNC;
                 address=0;
@@ -89,11 +88,7 @@ class MultiDCSBios {
               
             case DCSBIOS_STATE_COUNT_HIGH:
               count = (c << 8) | count;
-              state = DCSBIOS_STATE_DATA_LOW;
-              
-              /*Serial.print(count);
-              Serial.print(")");*/
-              
+              state = DCSBIOS_STATE_DATA_LOW;  
               break;
               
             case DCSBIOS_STATE_DATA_LOW:
@@ -109,10 +104,7 @@ class MultiDCSBios {
               count--;
               _messageDCS[len]=c;
               len++;
-             // Serial.print(data,HEX);
-             // Serial.print(" ");
-        
-              //address += 2;
+         
               if (count == 0) {
                 //processData(_messageDCS,address, len);
                 processData(address, len);
@@ -140,10 +132,7 @@ class MultiDCSBios {
     }
     
     void processData(unsigned int address, unsigned int len){//char *messageDCS, unsigned int address, unsigned int len){
-
-      /*Serial.print("Address:");
-      Serial.println(address);*/
-      
+   
       switch (address){
         case MODULE_NAME:
           if (!strcmp(_messageDCS,"A-4E-C")){
@@ -167,6 +156,7 @@ class MultiDCSBios {
             _lastModuleId=_moduleId;
           }
           break;
+        // Some special commands to take into consideration  
         case DCS_BIOS_VERSION:
         case PILOT_NAME:
         case MISSION_START_TIME:

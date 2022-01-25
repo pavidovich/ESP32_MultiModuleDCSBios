@@ -52,6 +52,8 @@
   #define T_45              0x9000  
   
   // List of each module action set location
+  // it is really important to take care this in the 
+  // structure definitions
   #define A4EC_LOC  0
   #define T45_LOC   1
   #define F5E3_LOC  2

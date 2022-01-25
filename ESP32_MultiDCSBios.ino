@@ -4,10 +4,7 @@
  * 
  */
 
-#define ESP32
-
 #include "include.h"
-#include "NetConfig.h"
 #include "MultiDCSBios.h"
 
 #include "T45_functions.h"
@@ -18,13 +15,7 @@
 //  LAN definitions
 //**************************
 
-#ifdef ESP8266
- #include <ESP8266WiFi.h>
-#endif
-#ifdef ESP32
-  #include <WiFi.h>
-#endif
-
+#include <WiFi.h>
 #include <WiFiUdp.h>
 
 WiFiUDP udp;

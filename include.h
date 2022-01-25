@@ -32,6 +32,9 @@
   /*
    * Global data structure
    */
+  
+  // Structure that contains the data required to interpretate the data received 
+  // from DCS-Bios. It also points to the callback function
   struct actionReceived{
     uint16_t address;
     uint16_t mask;
@@ -39,31 +42,20 @@
     void (*callback)(char *messageDCS, unsigned int, unsigned int, unsigned char);
   };
   
+  // Structure that contains the callback functions to execute after receiving the
+  // corresponding address from DCS-Bios
   struct moduleActionsReceived{
     uint16_t moduleId;
     uint8_t numActions;
     struct actionReceived *actionSet;
   };
   
-  
-  struct actionToDo{
-    uint8_t buttonId;
-    void (*callback)(void);
-  };
-  
+
+  // Structure that contains the set of commands to send for each module
   struct moduleActionsToDo{
     uint16_t moduleId;
-    //uint8_t numActions;
-    //struct actionToDo *actionSet;
     const char **actionSet;
   };
 
-  
-  
-  /*
-   * Global Functions
-   */
-
-  void sendDcsBiosMessage(unsigned char *msg, unsigned char lenmsg);
 
 #endif
