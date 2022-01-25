@@ -1,0 +1,56 @@
+char *T45_ActionsToDo[]{
+  "", // 0 Dial TACAN REC-AA/TR ++
+  "", // 1 Dial TACAN REC-AA/TR --
+  "", // 2 TACAN X
+  "", // 3 TACAN Y
+  "", // 4 TACAN ON
+  "", // 5 TACAN OFF
+  "", // 6 ILS ON
+  "", // 7 ILS OFF
+  "", // 8 TACAN H++
+  "", // 9 TACAN H --
+  "", // 10 TACAN L++
+  "", // 11 TACAN L--
+  "", // 12 ILS H++
+  "", // 13 ILS H--
+  "", // 14 ILS L++
+  "", // 15 ILS L--
+  "", // 16 R2_0 ++ (Left to Right)
+  "", // 17 R2_0 --
+  "", // 18 R2_1 ++
+  "", // 19 R2_1 --
+  "", // 20 R2_2 ++
+  "", // 21 R2_2 --
+  "", // 22 R2_3 ++
+  "", // 23 R2_3 ++
+  "", // 24 R2_4 ++
+  "", // 25 R2_4 --
+  "", // 26 R2 Channel ++
+  "", // 27 R2 Channel --
+  "", // 28 R2_OFF-ADF --
+  "", // 28 R2_OFF-ADF ++
+  "", // 30 R2_MAN-GUARD --
+  "", // 31 R2_MAN-GUARD ++
+  "", // 32 R2 AM
+  "", // 33 R2 FM
+  "", // 34 R2 PRG
+  "", // 35 R1_0 ++ (Left to Right)
+  "", // 36 R1_0 --
+  "", // 37 R1_1 ++
+  "", // 38 R1_1 --
+  "", // 39 R1_2 ++
+  "", // 40 R1_2 --
+  "", // 41 R1_3 ++
+  "", // 42 R1_3 ++
+  "", // 43 R1_4 ++
+  "", // 44 R1_4 --
+  "", // 45 R1 Channel ++
+  "", // 46 R1 Channel --
+  "", // 47 R1_OFF-ADF --
+  "", // 48 R1_OFF-ADF ++
+  "", // 49 R1_MAN-GUARD --
+  "", // 50 R1_MAN-GUARD ++
+  "", // 51 R1 AM
+  "", // 52 R1 FM
+  "" // 53 R1 PRG
+};
