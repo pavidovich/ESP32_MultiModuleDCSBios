@@ -38,8 +38,8 @@ char dataUdP[512];
 
 
 // Remember to add the SSID/PASS
-const char* ssid     = "SSID_LAN";
-const char* password = "PASS_LAN";
+//const char* ssid     = "SSID_LAN";
+//const char* password = "PASS_LAN";
   
 IPAddress remote_IP;
 IPAddress local_IP;
@@ -116,31 +116,32 @@ void loop() {
     //moduleChanged=false;
   }
 
- // New function here
-   
- char button = getButton();
- if (button!=-1) {
+ // This part of the code simulates the button Id obtained from
+ // the button box
+ int button = getButton();
+ 
+ if (button!=-1 && multiDCS.getModuleId()!=NO_MODULE) {
    moduleExecuteButtonAction(multiDCS.getModuleIdSetLoc(),button);
  }
+ 
 }
 
-char getButton(){
+int getButton(){
    // this function will simulate a button box and it returns 
-   // the code of pressing button
+   // the code of the button pressed
+   // Buttons are in the range of 0..127
+   // It returns -1 if there is nothing to return
+   // Button Id is set by the Serial monitor
    if (Serial.available()){
-      // Send commands to the ESP32 as it was button press
-      unsigned char button = Serial.parseInt();
-      Serial.print("Module get:");
-      Serial.println(multiDCS.getModuleIdSetLoc());
-      Serial.print(" button:");
-      Serial.print(button);
-      return(button);
-   } else {
-        return -1;
-     }
+      int button = Serial.parseInt();
+      if (button>=0 && button <128) {
+        return(button);
+      }  
+   }
+   return -1;
 }
 
-boolean moduleExecuteButtonAction(unsigned int moduleIdSetLoc, char button){
+boolean moduleExecuteButtonAction(unsigned int moduleIdSetLoc, int button){
   udp.beginPacket(udp.remoteIP(),dcs_port);
   uint8_t pos=1;
   char data = moduleSetToDo[moduleIdSetLoc].actionSet[button][0];
