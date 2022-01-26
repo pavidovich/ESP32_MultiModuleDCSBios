@@ -38,8 +38,8 @@ char dataUdP[512];
 
 
 // Remember to add the SSID/PASS
-//const char* ssid     = "SSID_LAN";
-//const char* password = "PASS_LAN";
+const char* ssid     = "SSID_LAN";
+const char* password = "PASS_LAN";
   
 IPAddress remote_IP;
 IPAddress local_IP;
