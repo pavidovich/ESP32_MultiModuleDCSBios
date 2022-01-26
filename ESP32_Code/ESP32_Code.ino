@@ -116,20 +116,31 @@ void loop() {
     //moduleChanged=false;
   }
 
-
- if (Serial.available()){
-   // Send commands to the ESP32 as it was button press
-   unsigned char button = Serial.parseInt();
-   Serial.print("Module get:");
-   Serial.println(multiDCS.getModuleIdSetLoc());
-   Serial.print(" button:");
-   Serial.print(button);
+ // New function here
+   
+ char button = getButton();
+ if (button!=-1) {
    moduleExecuteButtonAction(multiDCS.getModuleIdSetLoc(),button);
  }
-
 }
 
-boolean moduleExecuteButtonAction(unsigned int moduleIdSetLoc, unsigned char button){
+char getButton(){
+   // this function will simulate a button box and it returns 
+   // the code of pressing button
+   if (Serial.available()){
+      // Send commands to the ESP32 as it was button press
+      unsigned char button = Serial.parseInt();
+      Serial.print("Module get:");
+      Serial.println(multiDCS.getModuleIdSetLoc());
+      Serial.print(" button:");
+      Serial.print(button);
+      return(button);
+   } else {
+        return -1;
+     }
+}
+
+boolean moduleExecuteButtonAction(unsigned int moduleIdSetLoc, char button){
   udp.beginPacket(udp.remoteIP(),dcs_port);
   uint8_t pos=1;
   char data = moduleSetToDo[moduleIdSetLoc].actionSet[button][0];
