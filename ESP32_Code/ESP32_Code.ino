@@ -1,8 +1,15 @@
 /*
  * ESP32 Dev Module
- * Default 4MB with spiffs
+ * or
+ * ESP8266 NodeMCU
+ * 
+ * it can be also tested in other platforms
  * 
  */
+
+// First select the board to use
+#define ESP32
+//#define ESP8266
 
 #include "include.h"
 #include "MultiDCSBios.h"
@@ -15,7 +22,12 @@
 //  LAN definitions
 //**************************
 
-#include <WiFi.h>
+#ifdef ESP32
+   #include <WiFi.h>
+ #else 
+   #include <ESP8266WiFi.h>
+#endif
+
 #include <WiFiUdp.h>
 
 WiFiUDP udp;
@@ -24,6 +36,8 @@ unsigned int multi_port=5010;
 unsigned int dcs_port=7778;
 char dataUdP[512];
 
+
+// Remember to add the SSID/PASS
 const char* ssid     = "SSID_LAN";
 const char* password = "PASS_LAN";
   
