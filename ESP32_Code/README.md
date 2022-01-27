@@ -95,4 +95,6 @@ File contents:
 
 ----
 
-> ___Comments:___ Functions defined for callbacks can be reused, just take into account the mask and shift parameters. It can be possible to add the *"**moduleId**"* as an additional parameter and then modulate the function behaviour.
+___Comments:___
+
+>Functions defined for callbacks can be reused, just take into account the mask and shift parameters. It can be possible to add the *"**moduleId**"* as an additional parameter and then modulate the function behaviour.
