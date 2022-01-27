@@ -43,7 +43,7 @@
     void (*callback)(char *messageDCS, unsigned int, unsigned int, unsigned char);
   };
   
-  // Structure that contains the callback functions to execute after receiving the
+  // Structugit re that contains the callback functions to execute after receiving the
   // corresponding address from DCS-Bios
   struct moduleActionsReceived{
     uint16_t moduleId;
