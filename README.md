@@ -7,11 +7,11 @@ This project has been started in order to provide interaction between DCS and th
 </p>
 
 This button box implements:
-* **2 Radios** with Frequency tuning knobs + AM/FM switch + Mode selector + Channel selector + Prog/Load button for each one.
-* **1 Radio selector switch**. It allows to share the encoders and buttons between the two radios selecting the the active radio.
-* **TACAN** with tunning knobs + X/Y channel selector + Mode selector + ON/OFF switch
-* **ILS** with tunning knobs + ON/OFF switch
-* **Brightness knob**
+* ***2 Radios*** with Frequency tuning knobs + AM/FM switch + Mode selector + Channel selector + Prog/Load button for each one.
+* ***1 Radio selector switch*** *(R1/R2)*. It allows to share the encoders and buttons between the two radios selecting the the active radio.
+* ***TACAN*** with tunning knobs + X/Y channel selector + Mode selector + ON/OFF switch
+* ***ILS*** with tunning knobs + ON/OFF switch
+* ***Brightness knob***
 
 In total there are 53 different buttons, each one with different ways to interact with DCS in function of the current active module in DCS.
 
