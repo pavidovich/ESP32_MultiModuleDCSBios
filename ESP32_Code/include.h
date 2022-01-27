@@ -6,6 +6,7 @@
   //**************************** 
   
   #define NUM_MODULES 3
+  #define MAX_NUM_BUTTONS 53
   
   // Protocol definitions
   #define DCSBIOS_STATE_WAIT_FOR_SYNC 0

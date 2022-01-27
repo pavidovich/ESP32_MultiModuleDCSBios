@@ -134,7 +134,7 @@ int getButton(){
    // Button Id is set by the Serial monitor
    if (Serial.available()){
       int button = Serial.parseInt();
-      if (button>=0 && button <128) {
+      if (button>=0 && button<MAX_NUM_BUTTONS) {
         return(button);
       }  
    }
