@@ -83,9 +83,9 @@ File contents:
 * ### MultiDCSBios.h
   - It contains the class that process the input stream from DCSBios. It is mainly based on the original [DCSBios](https://github.com/dcs-bios)
   - **executeAction()** receives the data read and its length (address / len). Determines the current module and launch the callback function.
-* ## Module_Address.h
+* ### Module_Address.h
   - It contains the official module Id and also the module actions location in the array _moduleActionsReceived_ , thus 
-* ## A4EC_functions.h / F5E3_functions.h / T45_functions.h
+* ### A4EC_functions.h / F5E3_functions.h / T45_functions.h
   - These files contains the defintions of the required callbacks to process the data from DCSBios and also the messages to send after pressing any button
 
 ----
