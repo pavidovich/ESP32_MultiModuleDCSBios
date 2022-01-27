@@ -62,10 +62,15 @@ File contents:
      
      where T45_ActionsToDo is somehing like this:
          const char *T45_ActionsToDo[]{
-          "TACAN_PW 1",   // Button 0 TACAN ON
-          "TACAN_PW 0",   // Button 1 TACAN OFF
-          "VOR_ILS_PW 1", // Button 2 ILS ON
-          "VOR_ILS_PW 0", // Button 3 ILS OFF
+          // "_" means not implemented
+          "_",            // Button 0 Dial TACAN 
+          "_",            // Button 1 Dial TACAN
+          "_",            // Button 2 TACAN X
+          "_",            // Button 3 TACAN Y
+          "TACAN_PW 1",   // Button 4 TACAN ON
+          "TACAN_PW 0",   // Button 5 TACAN OFF
+          "VOR_ILS_PW 1", // Button 6 ILS ON
+          "VOR_ILS_PW 0", // Button 7 ILS OFF
           ....
          }  
      each array position identifies a button Id
