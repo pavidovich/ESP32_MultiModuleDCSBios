@@ -32,8 +32,6 @@ The current project is a first implementation that provides the interaction excl
 
 It receives and sends data completely wirelessly and is capable of managing several modules. Examples for the A-4E-C, F-5E-3 and VNAO-T45 are present in the source code folder. 
 
-The modules DCS-Bios profiles, which contains the addresses and data from and for DCS-Bios, are those present in the [DCS Flight Panels Project](https://github.com/DCSFlightpanels)
-
 ----
 
 #### 3. Why this project
