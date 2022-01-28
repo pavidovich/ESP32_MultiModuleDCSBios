@@ -17,9 +17,9 @@ In total there are 53 different buttons, each one with different ways to interac
 
 It should be taken into consideration that some components present in the button box do not exist in some DCS modules. And furthermore, some modules require different ways to do the same actions. By this reason it is no easy to create an universal button box.
 
-The current project is just a first implementation to provide the required interaction based exclusively on DCS-Bios.
+The current project is just a first implementation to provide the required interaction based exclusively on DCS-Bios. The main implementation is based on the Raspberry Pi-Pico + ESP-01
 
-The modules profiles are based on those present in the [DCS Flight Panels](https://github.com/DCSFlightpanels)
+The modules DCSBios profiles are based on those present in the [DCS Flight Panels](https://github.com/DCSFlightpanels)
 
 ---
 ToDo: improve the documentation and some code stuff
