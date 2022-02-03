@@ -75,7 +75,8 @@ File contents:
          }  
      each array position identifies a button Id.
      
-     It is possible to concatenate multiple commands using the '\n' separator. When sending these commands, a delay will be added in between each one.
+     It is possible to concatenate multiple commands using the '\n' separator. When sending these commands, 
+     a delay will be added in between each one.
      
      -- Example:
      ...
