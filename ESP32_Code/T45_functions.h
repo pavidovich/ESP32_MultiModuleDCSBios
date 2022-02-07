@@ -21,14 +21,14 @@ actionReceived T45_ActionsReceived[]={
 const char *T45_ActionsToDo[]{
   // "_" means not implemented
 
-  "_", // 0 Dial TACAN 
-  "_", // 1 Dial TACAN
+  "_", // 0 Dial Mode TACAN ++
+  "_", // 1 Dial Mode TACAN --
   "_", // 2 TACAN X
   "_", // 3 TACAN Y
   "TACAN_PW 1", // 4 TACAN ON
   "TACAN_PW 0", // 5 TACAN OFF
-  "VOR_ILS_PW 1", // 6 ILS ON
-  "VOR_ILS_PW 0", // 7 ILS OFF
+  "VOR_ILS_PW 0", // 6 ILS OFF
+  "VOR_ILS_PW 1", // 7 ILS ON
   "TACAN_CHAN_10 INC", // 8 TACAN H++
   "TACAN_CHAN_10 DEC", // 9 TACAN H --
   "TACAN_CHAN_1 INC", // 10 TACAN L++
