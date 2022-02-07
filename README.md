@@ -38,14 +38,15 @@ It receives and sends data completely wirelessly and is capable of managing seve
 
 The use of HID devices allows users to easily interact with DCS. It is just required assign the controls to the corresponding buttons using the DCS interface. However, this is a unidirectional interaction, users are just only capable to send commands to DCS but they are not able to get and process any information. DCS-Bios is able to get data from the DCS modules and export their data out of DCS. Arduino DCS-Bios library allows the bi-directional communication, getting the data from DCS-Bios and providing commands to DCS.
 
-The main issue is the fact that the Arduino code is module dependent, it is not capable to interact with any other module that the initial for which it was programmed. It does not provide a multi-module management.
+The main issue in the original Arduino DCS-Bios implementations is the fact that the Arduino code is module dependent, it is not capable to interact with any other module that the initial for which it was programmed. It does not provide a multi-module management.
 
-The main goal fo the present project is to be capable of manage several modules easily. The main drawback comes from the memory limitation present in the Arduino boards. For this reason, a different approach has been adopted. There are many microcontrollers options, the selected one is the ESP32. This microcontroller has a big amount of memory, WiFi support, and much more CPU power. Furhermore, the WiFi capability of the ESP32 allows the project to avoid the USB port, and any wired connection with the PC.
+The main goal in the present project is to be capable of manage several modules easily. The main drawback to overcome is the Arduino UNO board memory limitation. Although it is possible to use any other Arduino flavour board as it is Arduino MEGA, there are many other microcontrollers options. Thus, the microcontroller selected in this project is the ESP32. This microcontroller has a big amount of memory, WiFi support, and much more CPU power than traditional Arduino boards. But what is really interesting is the WiFi capability of the ESP32 that allows to avoid the USB port, and then any wired connection with the PC.
 
 Thus, the present project allows the user to:
   * Receive data from and send commands to DCS-Bios.
   * Manage several DCS modules that have DCS-Bios interface*.
   * Avoid the wired connection of the button-box via the USB port with the PC.
+  * Allows the wireless interaction with DCS-Bios.
 
 > \* It is required to have a DCS-Bios/Module interface. You can have some of them via the [DCS-Bios](https://github.com/dcs-bios) official github, or in the [DCS Fligh Panels](https://github.com/DCSFlightpanels/dcs-bios) DCS-Bios fork
 

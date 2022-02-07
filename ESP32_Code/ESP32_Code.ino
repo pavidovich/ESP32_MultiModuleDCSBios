@@ -148,10 +148,20 @@ boolean moduleExecuteButtonAction(unsigned int moduleIdSetLoc, int button){
   if (data=='-'){
     return false;
   } else { // This button has not any command to send
-      while (data!=0x00){       
+      while (data!=0x00){
+        if (data=='\n'){
+          // The commands string can be composed by multiple actions
+          // all of them must be separated by '\n' 
+          // T45_functions.h file includes some examples
+          // The delay allows to give the system to react 
+          // as the user does.This value can be modulated accordingly 
+          // to the user necessities.
+          delay(50);
+        }
         udp.write(data);
         data = moduleSetToDo[moduleIdSetLoc].actionSet[button][pos++];
       };
+      // Finish the transmission with '\n' 
       udp.write('\n');
       udp.endPacket();
       return true; // Command has been sent

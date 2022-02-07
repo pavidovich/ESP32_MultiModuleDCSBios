@@ -73,7 +73,19 @@ File contents:
           "VOR_ILS_PW 0", // Button 7 ILS OFF
           ....
          }  
-     each array position identifies a button Id
+     each array position identifies a button Id.
+     
+     It is possible to concatenate multiple commands using the '\n' separator. When sending these commands, 
+     a delay will be added in between each one.
+     
+     -- Example:
+     ...
+     "COMM_2_FREQ_10 2\nCOMM_2_FREQ_10 1", // COMM 2 FREQ 10 : Send first command + wait + Send second command
+     "COMM_2_FREQ_10 0\nCOMM_2_FREQ_10 1", 
+     "COMM_2_FREQ_1 2\nCOMM_2_FREQ_1 1", 
+     "COMM_2_FREQ_1 0\nCOMM_2_FREQ_1 1", 
+     ...
+     
   
   ```
   
