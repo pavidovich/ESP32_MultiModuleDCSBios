@@ -7,6 +7,8 @@
 
 This project has been started to experiment and test the interaction capabilities of DCS-Bios with the multi-module Radio button box that I was previously created.
 
+___Keep this in mind, as this is an implementation specifically designed for this button box and may not work with yours.___
+
 The initial implementation of the button box was based on the Raspberry Pi-Pico + ESP-01 pair. The data stream is obtained wirelessly from DCS-Bios, via the ESP-01, and then displayed on the screens (8 digits seven-segments + OLED), and the user interaction is provided through traditional HID button box interaction.
 
 <p align="center">
